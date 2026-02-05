@@ -92,7 +92,7 @@ func (h *Handler) Upload(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	url := "https://report.funq.kr/" + slug
+	url := "https://insight.funq.kr/" + slug
 	h.renderResult(w, UploadResult{Success: true, URL: url})
 }
 
