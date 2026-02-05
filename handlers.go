@@ -26,6 +26,11 @@ func (h *Handler) Index(w http.ResponseWriter, r *http.Request) {
 	path := r.URL.Path
 
 	if path == "/" {
+		http.Redirect(w, r, "/home", http.StatusFound)
+		return
+	}
+
+	if path == "/home" {
 		h.template.Execute(w, nil)
 		return
 	}
